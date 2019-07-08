@@ -1,0 +1,13 @@
+DESCRIPTION = "BalconyWateringSystem application" 
+SECTION = "examples" 
+LICENSE = "MIT" 
+PR = "r0" 
+
+DEPENDS = "ncurses libyaml boost.di"
+
+#SRC_URI = "git://elchtzeasar@github.com/elchtzeasar/balcony-watering-system.git;protocol=https;tag=v0.1"
+SRC_URI = "git://github.com/elchtzeasar/balcony-watering-system.git;tag=v0.1"
+
+S = "${WORKDIR}/git"
+
+inherit pkgconfig cmake
