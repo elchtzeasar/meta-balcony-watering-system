@@ -1,1 +1,2 @@
-IMAGE_INSTALL += " balcony-watering-system"
+IMAGE_INSTALL += " balcony-watering-system openssh"
+
