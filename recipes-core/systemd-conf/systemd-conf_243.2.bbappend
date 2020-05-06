@@ -28,8 +28,8 @@ do_install_append() {
     install -d ${D}${systemd_system_unitdir}
     install -d ${D}${sysconfdir}/systemd/system/multi-user.target.wants/
     install -m 0644 ${WORKDIR}/balcony-watering-system.service ${D}${systemd_system_unitdir}/
-    ln -s ${D}${systemd_system_unitdir}/balcony-watering-system.service ${D}${sysconfdir}/systemd/system/multi-user.target.wants/
+    ln -s ${systemd_system_unitdir}/balcony-watering-system.service ${D}${sysconfdir}/systemd/system/multi-user.target.wants/
 
-    install -d ${D}/etc/udev/rules.d/99-i2c.rules
+    install -d ${D}/etc/udev/rules.d/
     install -m 0644 ${WORKDIR}/i2c.rules ${D}/etc/udev/rules.d/99-i2c.rules
 }
